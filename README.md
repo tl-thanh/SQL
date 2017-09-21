@@ -1,6 +1,7 @@
 •	1a. You need a list of all the actors’ first name and last name
 
 SELECT first_name, last_name
+
 FROM actor;
 
 
