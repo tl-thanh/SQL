@@ -1,7 +1,7 @@
 •	1a. You need a list of all the actors’ first name and last name
-
-SELECT first_name, last_name
-FROM actor;
+<span style="color:burgandy">
+  SELECT first_name, last_name
+  FROM actor;
 
 •	1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name
 
