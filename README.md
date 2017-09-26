@@ -8,12 +8,12 @@
 	b) pagila-insert-data.sql
 	c) pagila-schema.sql
 2) Open up psql in the directory of these files and do the following
-	a) Create your database
-	b) Connect to your database
-	c) Run these commands
-		1. \i pagila-schema.sql
-		2. \i pagila-data.sql
-		3. \i pagila-insert-data.sql
+<br />	a) Create your database
+<br />	b) Connect to your database
+<br />	c) Run these commands
+<br />		1. \i pagila-schema.sql
+<br />		2. \i pagila-data.sql
+<br />		3. \i pagila-insert-data.sql
 
 ### Here are the answers to the SQL questions:
 
