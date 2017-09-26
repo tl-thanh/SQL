@@ -3,13 +3,17 @@
 ## Here is how to install the sql files attached.
 
 ### In the terminal ... do the following.
-1) Go to the specfic path where you want downloaded the 3 sql files.
-2) Open up psql in the directory of these files and run these commands
-3) Create your database
-4) Connect to your database
-5) \i pagila-schema.sql
-6) \i pagila-data.sql
-7) \i pagila-insert-data.sql
+1) Go to the specfic path where you downloaded the 3 sql files.
+	a) pagila-data.sql
+	b) pagila-insert-data.sql
+	c) pagila-schema.sql
+2) Open up psql in the directory of these files and do the following
+	a) Create your database
+	b) Connect to your database
+	c) Run these commands
+		1. \i pagila-schema.sql
+		2. \i pagila-data.sql
+		3. \i pagila-insert-data.sql
 
 ### Here are the answers to the SQL questions:
 
