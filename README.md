@@ -80,7 +80,7 @@ GROUP BY last_name;<br />
 SELECT last_name, count(*)<br />
 FROM actor<br />
 GROUP BY last_name<br />
-HAVING count(*) > 1;
+HAVING count(*) > 1
 
 •	4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS. Write a query to fix the record.
 
@@ -158,6 +158,7 @@ o	bonus: When would you use a self join?
 When you want to compare values in a column with other values in the same column in the same table.
 
 You’re answering each of these questions. Please include examples and answer them in plain english. 
+
 •	6a. Use a JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
 
 SELECT staff.first_name, staff.last_name, address.address<br />
