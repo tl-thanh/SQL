@@ -275,4 +275,4 @@ INNER JOIN film_category ON film_category.category_id = category.category_id
 •	8b. How would you display the view that you created in 8a?
 
 
-•	8c. You find that you no l
+•	8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
