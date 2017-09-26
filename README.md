@@ -19,19 +19,19 @@
 
 •	1a. You need a list of all the actors’ first name and last name
 
-SELECT first_name, last_name
+SELECT first_name, last_name<br />
 FROM actor;
 
 •	1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name
 
-SELECT CONCAT (UPPER(first_name), ' ', UPPER(last_name))
-AS Actor_Name
+SELECT CONCAT (UPPER(first_name), ' ', UPPER(last_name))<br />
+AS Actor_Name<br />
 FROM actor;
 
 •	2a. You need to find the id, first name, and last name of an actor, of whom you know only the first name of "Joe." What is one query would you use to obtain this information?
 
-SELECT actor_id, first_name, last_name
-FROM actor
+SELECT actor_id, first_name, last_name<br />
+FROM actor<br />
 WHERE first_name='JOE';
 
 •	2b. Find all actors whose last name contain the letters GEN. Make this case insensitive
