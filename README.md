@@ -11,9 +11,9 @@
 <br />	a) Create your database
 <br />	b) Connect to your database
 <br />	c) Run these commands
-<br />	.....1. \i pagila-schema.sql
-<br />	.....2. \i pagila-data.sql
-<br />	.....3. \i pagila-insert-data.sql
+<br />	..1. \i pagila-schema.sql
+<br />	..2. \i pagila-data.sql
+<br />	..3. \i pagila-insert-data.sql
 
 ### Here are the answers to the SQL questions:
 
