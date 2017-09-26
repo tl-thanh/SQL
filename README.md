@@ -238,7 +238,14 @@ WHERE category_id = '8';
 
 •	7e. Display the most frequently rented movies in descending order.
 
-SELECT 
+SELECT f.title, COUNT(i.inventory_id) AS times_rented<br />
+FROM film f<br />
+JOIN inventory i<br />
+ON f.film_id = i.film_id<br />
+JOIN rental r<br />
+ON i.inventory_id = r.inventory_id<br />
+GROUP BY f.title<br />
+ORDER BY COUNT(i.inventory_id) DESC;
 
 •	7f. Write a query to display how much business, in dollars, each store brought in.
 
@@ -265,7 +272,26 @@ INNER JOIN film_category ON film_category.category_id = category.category_id
 •	8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. 
 
 
+CREATE VIEW top_five_genre AS<br />
+SELECT c.name AS genre, SUM(p.amount) AS gross_revenue<br />
+FROM category c<br />
+JOIN film_category fc<br />
+ON c.category_id=fc.category_id<br />
+JOIN inventory i<br />
+ON fc.film_id=i.film_id<br />
+JOIN rental r<br />
+ON i.inventory_id=r.inventory_id<br />
+JOIN payment p<br />
+ON r.rental_id=p.rental_id<br />
+GROUP BY c.name<br />
+ORDER BY gross_revenue DESC<br />
+LIMIT 5;
+
 •	8b. How would you display the view that you created in 8a?
 
+SELECT *<br />
+FROM top_five_genre;
 
 •	8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
+
+DROP VIEW top_five_genre;
