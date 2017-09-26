@@ -159,10 +159,10 @@ LEFT JOIN address ON staff.address_id=address.address_id;
 
 •	6b. Use a JOIN to display the total amount rung up by each staff member in January of 2007. Use tables staff and payment.
 
-SELECT staff.first_name, staff.last_name, payment.amount
+SELECT staff.first_name, staff.last_name, SUM(payment_P2007_01.amount)
 FROM staff
-LEFT JOIN payment ON staff.staff_id=payment.staff_id
-WHERE payment_date iLIKE '2007-01%';
+LEFT JOIN payment_P2007_01 ON staff.staff_id= payment_P2007_01.staff_id
+GROUP BY staff.first_name, staff.last_name;
 
 You’ll have to google for this one, we didn’t cover it explicitly in class. 
 
