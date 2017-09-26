@@ -45,7 +45,6 @@ FROM actor<br />
 WHERE last_name iLIKE '%LI%'<br />
 ORDER BY last_name ASC, first_name ASC;
 
-
 •	2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
 
 SELECT country_id, country<br />
@@ -155,8 +154,6 @@ o	bonus: When would you use a self join?
 
 When you want to compare values in a column with other values in the same column in the same table.
 
-You’re answering each of these questions. Please include examples and answer them in plain english. 
-
 •	6a. Use a JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
 
 SELECT staff.first_name, staff.last_name, address.address<br />
@@ -178,8 +175,6 @@ JOIN staff s<br />
 ON p.staff_id = s.staff_id<br />
 WHERE LEFT((CAST(payment_date AS text)), 7) = '2007-01'<br />
 GROUP BY s.staff_id;
-
-You’ll have to google for this one, we didn’t cover it explicitly in class. 
 
 •	6c. List each film and the number of actors who are listed for that film. Use tables film_actor and film. Use inner join.
 
@@ -240,8 +235,6 @@ SELECT film.title<br />
 FROM film<br />
 INNER JOIN film_category ON film_category.film_id=film.film_id<br />
 WHERE category_id = '8';
-
-Now we mentioned family film, but there is no family film category. There’s a category that resembles that. In the real world nothing will be exact.
 
 •	7e. Display the most frequently rented movies in descending order.
 
