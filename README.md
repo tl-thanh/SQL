@@ -96,6 +96,7 @@ SET first_name = REPLACE(first_name, 'HARPO', 'GROUCHO')
 WHERE first_name='GROUCHO' AND last_name='WILLIAMS';
 
 •	5a. 
+
 o What’s the difference between a left join and a right join?
 
 Left join returns all the rows from the left table, even if there are no matches from the right table.
