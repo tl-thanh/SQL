@@ -1,8 +1,6 @@
 # This repository contains answers to SQL questions; this is one of the class homework assignments.
 
-## Here is how to install the sql files attached.
-
-### In the terminal ... do the following.
+### Here is how to install the sql files attached.  In the terminal ... do the following.
 1) Go to the specfic path where you downloaded the 3 sql files.
 <br />	a) pagila-data.sql
 <br />	b) pagila-insert-data.sql
