@@ -4,16 +4,16 @@
 
 ### In the terminal ... do the following.
 1) Go to the specfic path where you downloaded the 3 sql files.
-	a) pagila-data.sql
-	b) pagila-insert-data.sql
-	c) pagila-schema.sql
+<br />	a) pagila-data.sql
+<br />	b) pagila-insert-data.sql
+<br />	c) pagila-schema.sql
 2) Open up psql in the directory of these files and do the following
 <br />	a) Create your database
 <br />	b) Connect to your database
 <br />	c) Run these commands
-<br />		1. \i pagila-schema.sql
-<br />		2. \i pagila-data.sql
-<br />		3. \i pagila-insert-data.sql
+<br />	<br />	1. \i pagila-schema.sql
+<br />	<br />	2. \i pagila-data.sql
+<br />	<br />	3. \i pagila-insert-data.sql
 
 ### Here are the answers to the SQL questions:
 
