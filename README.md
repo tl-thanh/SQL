@@ -74,10 +74,10 @@ GROUP BY last_name;<br />
 
 •	4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
 
-SELECT last_name, count("*")<br />
+SELECT last_name, count(last_name)<br />
 FROM actor<br />
 GROUP BY last_name<br />
-HAVING count(*) > 1
+HAVING count(last_name) > 1
 
 •	4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS. Write a query to fix the record.
 
