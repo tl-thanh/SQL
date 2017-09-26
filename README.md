@@ -265,9 +265,19 @@ LEFT JOIN country ON city.country_id=country.country_id;
 
 •	7h. List the top five genres in gross revenue in descending order. 
 
-SELECT category.name, SUM(payment.amount)<br />
-FROM category<br />
-INNER JOIN film_category ON film_category.category_id = category.category_id
+SELECT c.name AS genre, SUM(p.amount) AS gross_revenue<br />
+FROM category c<br />
+JOIN film_category fc<br />
+ON c.category_id = fc.category_id<br />
+JOIN inventory i<br />
+ON fc.film_id = i.film_id<br />
+JOIN rental r<br />
+ON i.inventory_id = r.inventory_id<br />
+JOIN payment p<br />
+ON r.rental_id = p.rental_id<br />
+GROUP BY c.name<br />
+ORDER BY gross_revenue DESC<br />
+LIMIT 5;
 
 •	8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. 
 
