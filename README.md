@@ -92,61 +92,64 @@ BE CAREFUL NOT TO CHANGE THE FIRST NAME OF EVERY ACTOR TO MUCHO GROUCHO
 (Hint: update the record using a unique identifier.)
 
 UPDATE actor
-SET first_name = REPLACE(first_name, 'HARPO', 'GROUCHO')
-WHERE first_name='GROUCHO' AND last_name='WILLIAMS';
+SET first_name = CASE
+WHEN first_name = 'GROUCHO' THEN 'MUCHO GROUCHO'
+WHEN first_name = 'HARPO' THEN 'GROUCHO'
+END
+WHERE actor_id = 172;
 
-•	5a.                                                                                                                      
-o What’s the difference between a left join and a right join?
+•	5a.                                                                                                                          
+o	What’s the difference between a left join and a right join?
 
 Left join returns all the rows from the left table, even if there are no matches from the right table.
 
 Right join returns all the rows from the right table, even if there are no matches from the left table.
 
-o What about an inner join and an outer join? 
+o	What about an inner join and an outer join? 
 
 Inner join returns the rows where there’s a match in both tables.
 
 Outer join returns all rows from both tables, whether there is a match or not.
 
-o When would you use rank? 
+o	When would you use rank? 
 
 RANK gives ranking to your data based on your row, but it skipped rank if there are ties.  It provides the same ranking to “ties”.
 
-o What about dense_rank? 
+o	What about dense_rank? 
 
 Similar to RANK, it ranks your data but in consecutive order.  It doesn’t skipped rank.
 
-o When would you use a subquery in a select? 
+o	When would you use a subquery in a select? 
 
 Subquery is used when you know how to search for a value using a SELECT statement, but don’t know the exact value in the database.
 
-o When would you use a right join?
+o	When would you use a right join?
 
 A right join is similar to a left join except you are referencing the table on the “right”.  You want to return all data from the right table, but only certain data from the left table that intersect the data on the right table.
 
-o When would you use an inner join over an outer join?
+o	When would you use an inner join over an outer join?
 
 Use an inner join when you want to find and return matching data from both tables.  
 
-o What’s the difference between a left outer and a left join?
+o	What’s the difference between a left outer and a left join?
 
 There isn’t a difference really.
 
-o When would you use a group by?
+o	When would you use a group by?
 
 Group by is used to arrange identical data into groups.
 
-o Describe how you would do data reformatting
+o	Describe how you would do data reformatting
 
 You can use the FORMAT() function.
 SELECT FORMAT (column_name, format)
 FROM table_name;
 
-o When would you use a with clause?
+o	When would you use a with clause?
 
 The WITH clause is used to combine subqueries.
 
-o bonus: When would you use a self join?
+o	bonus: When would you use a self join?
 
 When you want to compare values in a column with other values in the same column in the same table.
 
@@ -163,6 +166,15 @@ SELECT staff.first_name, staff.last_name, SUM(payment_P2007_01.amount)
 FROM staff
 LEFT JOIN payment_P2007_01 ON staff.staff_id= payment_P2007_01.staff_id
 GROUP BY staff.first_name, staff.last_name;
+
+OR
+
+SELECT s.staff_id, s.first_name, s.last_name, SUM(p.amount) as total_amt
+FROM payment p
+JOIN staff s
+ON p.staff_id = s.staff_id
+WHERE LEFT((CAST(payment_date AS text)), 7) = '2007-01'
+GROUP BY s.staff_id;
 
 You’ll have to google for this one, we didn’t cover it explicitly in class. 
 
@@ -230,7 +242,7 @@ Now we mentioned family film, but there is no family film category. There’s a 
 
 •	7e. Display the most frequently rented movies in descending order.
 
-
+SELECT 
 
 •	7f. Write a query to display how much business, in dollars, each store brought in.
 
@@ -260,4 +272,4 @@ INNER JOIN film_category ON film_category.category_id = category.category_id
 •	8b. How would you display the view that you created in 8a?
 
 
-•	8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
+•	8c. You find that you no l
