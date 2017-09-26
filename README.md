@@ -96,57 +96,57 @@ SET first_name = REPLACE(first_name, 'HARPO', 'GROUCHO')
 WHERE first_name='GROUCHO' AND last_name='WILLIAMS';
 
 •	5a. 
-o	What’s the difference between a left join and a right join?
+o What’s the difference between a left join and a right join?
 
 Left join returns all the rows from the left table, even if there are no matches from the right table.
 
 Right join returns all the rows from the right table, even if there are no matches from the left table.
 
-o	What about an inner join and an outer join? 
+o What about an inner join and an outer join? 
 
 Inner join returns the rows where there’s a match in both tables.
 
 Outer join returns all rows from both tables, whether there is a match or not.
 
-o	When would you use rank? 
+o When would you use rank? 
 
 RANK gives ranking to your data based on your row, but it skipped rank if there are ties.  It provides the same ranking to “ties”.
 
-o	What about dense_rank? 
+o What about dense_rank? 
 
 Similar to RANK, it ranks your data but in consecutive order.  It doesn’t skipped rank.
 
-o	When would you use a subquery in a select? 
+o When would you use a subquery in a select? 
 
 Subquery is used when you know how to search for a value using a SELECT statement, but don’t know the exact value in the database.
 
-o	When would you use a right join?
+o When would you use a right join?
 
 A right join is similar to a left join except you are referencing the table on the “right”.  You want to return all data from the right table, but only certain data from the left table that intersect the data on the right table.
 
-o	When would you use an inner join over an outer join?
+o When would you use an inner join over an outer join?
 
 Use an inner join when you want to find and return matching data from both tables.  
 
-o	What’s the difference between a left outer and a left join?
+o What’s the difference between a left outer and a left join?
 
 There isn’t a difference really.
 
-o	When would you use a group by?
+o When would you use a group by?
 
 Group by is used to arrange identical data into groups.
 
-o	Describe how you would do data reformatting
+o Describe how you would do data reformatting
 
 You can use the FORMAT() function.
 SELECT FORMAT (column_name, format)
 FROM table_name;
 
-o	When would you use a with clause?
+o When would you use a with clause?
 
 The WITH clause is used to combine subqueries.
 
-o	bonus: When would you use a self join?
+o bonus: When would you use a self join?
 
 When you want to compare values in a column with other values in the same column in the same table.
 
